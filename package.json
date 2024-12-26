@@ -1,0 +1,26 @@
+{
+  "name": "everybody-codes",
+  "version": "1.0.0",
+  "description": "Solutions for Everybody Codes challenges",
+  "main": "src/cli/index.ts",
+  "bin": {
+    "ec": "src/cli/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidivad96/everybody-codes.git"
+  },
+  "author": "davidivad96",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidivad96/everybody-codes/issues"
+  },
+  "homepage": "https://github.com/davidivad96/everybody-codes#readme",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.1"
+  }
+}
