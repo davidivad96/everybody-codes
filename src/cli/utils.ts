@@ -30,6 +30,10 @@ export const scaffoldSolution = (path: string) => {
   writeFileSync(`${path}/partOne.ts`, solutionFileTemplate(1));
   writeFileSync(`${path}/partTwo.ts`, solutionFileTemplate(2));
   writeFileSync(`${path}/partThree.ts`, solutionFileTemplate(3));
-  writeFileSync(`${path}/input.txt`, "");
-  writeFileSync(`${path}/sample.txt`, "");
+  writeFileSync(`${path}/input_1.txt`, "");
+  writeFileSync(`${path}/sample_1.txt`, "");
+  writeFileSync(`${path}/input_2.txt`, "");
+  writeFileSync(`${path}/sample_2.txt`, "");
+  writeFileSync(`${path}/input_3.txt`, "");
+  writeFileSync(`${path}/sample_3.txt`, "");
 };
