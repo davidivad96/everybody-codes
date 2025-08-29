@@ -25,21 +25,40 @@ program
   });
 
 program
-  .command("new")
-  .description("Create a new challenge folder")
+  .command("new-event")
+  .description("Create a new event challenge folder")
   .argument("<year:number>", "Event year")
   .argument("<challenge:number>", "Challenge number")
   .action((year, challenge) => {
     const path = resolve(
       __dirname,
-      `../challenges/${year}/${padWithZero(challenge)}`
+      `../events/${year}/${padWithZero(challenge)}`
     );
     if (existsSync(path)) {
       console.log("Folder already exists");
     } else {
-      mkdirSync(path);
+      mkdirSync(path, { recursive: true });
       scaffoldSolution(path);
-      console.log("New challenge folder created");
+      console.log("New event challenge folder created");
+    }
+  });
+
+program
+  .command("new-story")
+  .description("Create a new story challenge folder")
+  .argument("<number:number>", "Story number")
+  .argument("<challenge:number>", "Challenge number")
+  .action((number, challenge) => {
+    const path = resolve(
+      __dirname,
+      `../stories/${number}/${padWithZero(challenge)}`
+    );
+    if (existsSync(path)) {
+      console.log("Folder already exists");
+    } else {
+      mkdirSync(path, { recursive: true });
+      scaffoldSolution(path);
+      console.log("New story challenge folder created");
     }
   });
 
