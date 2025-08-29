@@ -7,8 +7,8 @@ import { padWithZero, scaffoldSolution } from "./utils";
 const program = new Command("ec");
 
 program
-  .command("run")
-  .description("Run solution")
+  .command("run-event")
+  .description("Run event solution")
   .argument("<year:number>", "Event year")
   .argument("<challenge:number>", "Challenge number")
   .option("-p, --part <part:number>", "Part of the solution to run", "1")
@@ -18,9 +18,33 @@ program
     "input.txt"
   )
   .action((year, challenge, { part, file }) => {
-    const path = `../challenges/${year}/${padWithZero(challenge)}`;
+    const path = `../events/${year}/${padWithZero(challenge)}`;
     const { run } = require(path);
-    const text = readFileSync(resolve(__dirname, `${path}/${file}`), "utf8");
+    const text = readFileSync(
+      resolve(__dirname, `${path}/notes/${file}`),
+      "utf8"
+    );
+    console.log("solution: ", run(text, +part));
+  });
+
+program
+  .command("run-story")
+  .description("Run story solution")
+  .argument("<number:number>", "Story number")
+  .argument("<challenge:number>", "Challenge number")
+  .option("-p, --part <part:number>", "Part of the solution to run", "1")
+  .option(
+    "-f, --file <file:string>",
+    "Input file. If missing, the day input file is used instead",
+    "input.txt"
+  )
+  .action((number, challenge, { part, file }) => {
+    const path = `../stories/${number}/${padWithZero(challenge)}`;
+    const { run } = require(path);
+    const text = readFileSync(
+      resolve(__dirname, `${path}/notes/${file}`),
+      "utf8"
+    );
     console.log("solution: ", run(text, +part));
   });
 
