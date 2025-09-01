@@ -16,7 +16,8 @@ Solutions to Everybody Codes challenges
 
 ### Echoes of Enigmatus [No. 1]
 
-| #   | Title                                                     | Solution                                  |
-| --- | --------------------------------------------------------- | ----------------------------------------- |
-| 1   | [EniCode](https://everybody.codes/story/1/quests/1)       | [TypeScript](./src/stories/1/01/index.ts) |
-| 2   | [Tangled Trees](https://everybody.codes/story/1/quests/2) | [TypeScript](./src/stories/1/02/index.ts) |
+| #   | Title                                                               | Solution                                  |
+| --- | ------------------------------------------------------------------- | ----------------------------------------- |
+| 1   | [EniCode](https://everybody.codes/story/1/quests/1)                 | [TypeScript](./src/stories/1/01/index.ts) |
+| 2   | [Tangled Trees](https://everybody.codes/story/1/quests/2)           | [TypeScript](./src/stories/1/02/index.ts) |
+| 2   | [The Conical Snail Clock](https://everybody.codes/story/1/quests/3) | [TypeScript](./src/stories/1/03/index.ts) |
